@@ -36,6 +36,7 @@ module "ec2_instance" {
   ami                    = "ami-08c40ec9ead489470"
   instance_type          = "t2.micro"
   monitoring             = true
+  key_name               = "pvs"
   vpc_security_group_ids = [module.vpc.default_security_group_id]
   subnet_id              = module.vpc.public_subnets[0]
 
